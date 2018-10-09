@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Form Validate</title>
+
+<style>
+	body{
+		text-align: center;
+	}
+	</style>
+</head>
+
+<body>
+<h3>Hello and welcome to your own custom form validator.</h3>
+<p class="text-muted">All html, css and Javascript included in this one file.</p>
+
+<p>Please enter a number between 1 and 10.</p>
+
+<input id="number">
+
+<button type="button" onClick="validateFunction()">Submit</button>
+
+<p id="results"></p>
+
+
+<script>
+	function validateFunction(){
+		var x, text;
+		//get the value of the input field with id = number
+		x = document.getElementById('number').value;
+		
+		// If x is Not a Number or less than one or greater than 10
+		if(isNaN(x) || x < 1 || x > 10){
+			text = "Please enter a valid nuber";
+		}else{
+			text = "Number is all good, great Job!"
+		}
+		document.getElementById("results").innerHTML = text;
+	}
+	
+	</script>
+
+
+</body>
+</html>
